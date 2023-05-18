@@ -1,11 +1,11 @@
 <button (click)="openWindow('settings')">Open Settings</button>
 <button (click)="closeWindow('settings')">Close Settings</button>
-<button>Send Data to Component 1</button>
+<button (click)="sendData('settings')">Send Data to Component 1</button>
 <br>
 <br>
 <button (click)="openWindow('game-table')">Open Game Table</button>
 <button>Close Component 2</button>
-<button>Send Data to Component 2</button>
+<button (click)="sendData('game-table')">Send Data to Component 2</button>
 <br>
 <br>
 <button (click)="closeAllWindows()">Close all windows</button>

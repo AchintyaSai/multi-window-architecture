@@ -28,4 +28,9 @@ export class MainComponent implements OnInit {
   {
     this.winCommService.closeWindows()
   }
+
+  sendData(windowType : string)
+  {
+    this.winCommService.resendToChild(windowType, "From Parent -> "+windowType)
+  }
 }

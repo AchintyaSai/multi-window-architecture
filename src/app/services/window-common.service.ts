@@ -25,9 +25,6 @@ export class WindowCommonService {
         windowRef = this.winManager.open(windowType, windowType, features, false)
         break;
     }
-    setTimeout(() => {
-      this.setEventToChildWindow(windowRef)
-    }, 1000)
   }
 
   closeWindows(windowType = "all") {
@@ -45,9 +42,9 @@ export class WindowCommonService {
     })
   }
 
-  setEventToChildWindow(windowRef: Window) {
+  setEventToChildWindow(windowRef: Window, data : any) {
     //@ts-ignore
-    windowRef['childWindow'].setData("Hello World");
+    windowRef['childWindow'].setData(data);
     //@ts-ignore
     windowRef['childWindow'].subscribeToChild(this.getDataFromChild)
   }
