@@ -47,7 +47,11 @@
  */
 import 'zone.js';  // Included with Angular CLI.
 
-
+declare global{
+    interface Window {
+        allWindows : Map<string,any>;
+    }
+}
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
